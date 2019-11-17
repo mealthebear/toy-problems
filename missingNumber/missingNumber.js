@@ -23,6 +23,14 @@ of the input array (from 0 to n). Check each time
 if the number is in the object. If it's not, return it!
 */
 
-var missingNumber = (nums) => {
-    
+let missingNumber = (nums) => {
+    let numsObj = {};
+    for (let i = 0; i < nums.length; i++) {
+        numsObj[nums[i]] = true;
+    }
+    for (i = 0; i < nums.length; i++) {
+        if (!numsObj[i]) {
+            return i
+        }
+    }
 };
