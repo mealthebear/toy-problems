@@ -24,11 +24,18 @@ if the number is in the object. If it's not, return it!
 */
 
 let missingNumber = (nums) => {
+    if (nums.length === 1) {
+        if (nums[0] === 1) {
+            return 0;
+        } else if (nums[0] === 0) {
+            return 1;
+        }
+    }
     let numsObj = {};
     for (let i = 0; i < nums.length; i++) {
         numsObj[nums[i]] = true;
     }
-    for (i = 0; i < nums.length; i++) {
+    for (i = 0; i <= nums.length; i++) {
         if (!numsObj[i]) {
             return i
         }
