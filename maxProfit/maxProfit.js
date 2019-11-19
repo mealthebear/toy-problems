@@ -34,5 +34,11 @@ until you reach the end of the array. Everytime you buy and sell, add it an outp
 */
 
 let maxProfit = (prices) => {
-
+    let profit = 0;
+    for (let i = 0; i < prices.length - 1; i++) {
+        if (prices[i + 1] > prices[i]) {
+            profit += (prices[i + 1] - prices[i]);
+        }
+    }
+    return profit;
 }
