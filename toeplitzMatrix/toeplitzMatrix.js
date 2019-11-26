@@ -27,6 +27,21 @@
 // matrix will have a number of rows and columns in range [1, 20].
 // matrix[i][j] will be integers in range [0, 99].
 
+// Input: A matrix of integers
+// Output: A boolean value
+// Constraints: None
+// Edge Cases: None
+
+/* ** Strategy ** 
+Build two helper functions to make code readable and they'll check
+both axes (horizontal & vertical) of the matrix. You only have 
+to check the outermost top and left layer of the matrix. For each element,
+you increment the x and y coordinates by one and see if the element
+there equals itself or undefined. Undefined lets you know you're
+out of bounds. If at any point the elements in a diagonal don't equal,
+return false. Otherwise, just return true.
+*/
+
 let isToeplitzMatrix = (matrix) => {
     
 };
