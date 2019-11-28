@@ -42,6 +42,14 @@ out of bounds. If at any point the elements in a diagonal don't equal,
 return false. Otherwise, just return true.
 */
 
+let horizontalChecker = (matrix, x, y) => {
+
+}
+
+let verticalChecker = (matrix, x, y) => {
+
+}
+
 let isToeplitzMatrix = (matrix) => {
     
 };
