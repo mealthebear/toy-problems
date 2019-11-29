@@ -33,6 +33,16 @@ going until you reach the end of the string. Then you return the array. You
 may need to build a helper function for this.
 */
 
+let capString = (s, i, j) => {
+    let array = s.split('');
+    array[i] = array[i].toUpperCase();
+    if (j !== undefined) {
+        array[j] = array[j].toUpperCase();
+    }
+    let string = array.join('');
+    return string;
+}
+
 let letterCasePermutation = (s) => {
     
 };
