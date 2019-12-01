@@ -42,41 +42,12 @@ out of bounds. If at any point the elements in a diagonal don't equal,
 return false. Otherwise, just return true.
 */
 
-let horizontalChecker = (matrix, x, y) => {
-    let currentElem = matrix[x][y];
-    for (x; x < matrix.length; x++) {
-        if (matrix[x][y] !== currentElem) {
-            return false;
-        }
-        y++;
-    }
-    return true;
-}
-
-let verticalChecker = (matrix, x, y) => {
-    let currentElem = matrix[x][y];
-    for (y; y < matrix.length; y++) {
-        if (matrix[x][y] !== currentElem) {
-            return false;
-        }
-        x++;
-    }
-    return true;
-}
-
 let isToeplitzMatrix = (matrix) => {
-    if (matrix[0].length === 1) return true;
-    let x = 0, y = 0;
-    for (let i = 0; i < matrix.length; i++) {
-       if (horizontalChecker(matrix, i, y) === false) {
-           return false;
-       }
-    }
-    
-    for (i = 0; i < matrix.length; i++) {
-        if (verticalChecker(matrix, x, i) === false) {
-            return false;
-        }
+    for (let i = 0; i < matrix.length - 1; i++) {
+        for (j = 0; j < matrix[i].length - 1; j++){
+            if(matrix[i][j] != matrix[i+1][j+1])
+                return false;
+            }
     }
     return true;
 };
