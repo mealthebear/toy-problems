@@ -30,5 +30,17 @@ a value of one (only appearing once).
 */
 
 let singleNumber = (nums) => {
-
+    let objTracker = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (!objTracker[nums[i]]) {
+            objTracker[nums[i]] = 1;
+        } else {
+            objTracker[nums[i]] += 1;
+        }
+    }
+    for (let key in objTracker) {
+        if (objTracker[key] === 1) {
+            return Number(key);
+        }
+    }
 }
