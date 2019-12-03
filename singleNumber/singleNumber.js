@@ -15,6 +15,20 @@
 // Input: [4,1,2,1,2]
 // Output: 4
 
+// Input: An array of integers
+// Output: An integer (only appears once)
+// Constraints: O(n) run-time
+// Edge Cases: None
+
+/* ** Strategy **
+Create a variable to store the output integer. Then, create
+an object to store the amount of times each element shows up.
+Then, iterate through the input array and begin recording the 
+occurrences of each element in the object. Once finished iterating
+through the array, go through the object and return the key that has
+a value of one (only appearing once).
+*/
+
 let singleNumber = (nums) => {
-    
+
 }
