@@ -40,5 +40,17 @@ the value of it. If it doesn't, return 0.
 */
 
 let lastStoneWeight = (stones) => {
-    
+    while (stones.length > 1) {
+        stones.sort();
+        if (stones[stones.length - 1] !== stones[stones.length - 2]) {
+            let newStone = stones[stones.length - 1] - stones[stones.length - 2];
+            stones.pop();
+            stones.pop();
+            stones.push(newStone);
+        } else {
+            stones.pop();
+            stones.pop();
+        }
+    }
+    return stones.length === 1 ? stones[0] : 0;
 }
