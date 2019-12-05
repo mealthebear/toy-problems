@@ -26,6 +26,19 @@
 // 1 <= stones.length <= 30
 // 1 <= stones[i] <= 1000
 
+// Input: An array of integers
+// Output: An integer (last stone weight or 0)
+// Edge Cases: None
+
+/* ** Strategy ** 
+Create a while loop to run as long as there are more than 1 stones
+in the input array. On each iteration, sort the array in ascending order
+and check the last two stones. If both stones are equal, then pop the array
+twice. If they aren't, then pop the array twice and push the value of 
+the greater stone minus the lesser stone. Next, if the array has a stone, return
+the value of it. If it doesn't, return 0.
+*/
+
 let lastStoneWeight = (stones) => {
     
 }
