@@ -36,6 +36,24 @@ overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa" */
 // S contains only uppercase, lowercase and spaces. Exactly one space between each word.
 // 1 <= S.length <= 150.
 
+// Input: A string
+// Output: A string (converted to goat latin)
+// Edge Cases: None
+
+/* ** Strategy ** 
+Create an output string variable that will hold your final output result. Also,
+make a variable and set it equal to the string 'a'. This will keep track of 
+how many 'a's to add to the end of each word. Optionally, initialize an array with
+all the vowels for more readable code. Now, split the input string into an array on
+every space. Run a for loop, and on each word check if it starts with a vowel. If it doesn't,
+add the first letter appended to the end plus ma plus your 'a' string variable to your
+output string. If it does, just add ma plus your 'a' string variable to your output string. 
+Make sure to add a conditional if the word is either 'a' or 'i' and make sure to account for
+capital & lowercase letters. Be sure to stop on the second to last word too. Once, you're on the
+last word, exit the loop and just check if it starts with a vowel or not. You don't want 
+to add a space at the very end of the sentence. Then all you have to do is add ma and the 
+'a' string variable. 
+*/
 let toGoatLatin = (s) => {
 
 }
