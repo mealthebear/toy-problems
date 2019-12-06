@@ -49,11 +49,33 @@ every space. Run a for loop, and on each word check if it starts with a vowel. I
 add the first letter appended to the end plus ma plus your 'a' string variable to your
 output string. If it does, just add ma plus your 'a' string variable to your output string. 
 Make sure to add a conditional if the word is either 'a' or 'i' and make sure to account for
-capital & lowercase letters. Be sure to stop on the second to last word too. Once, you're on the
+capital & lowercase letters. Add an 'a' to your a variable on every iteration in the loop 
+Be sure to stop on the second to last word too. Once, you're on the
 last word, exit the loop and just check if it starts with a vowel or not. You don't want 
 to add a space at the very end of the sentence. Then all you have to do is add ma and the 
 'a' string variable. 
 */
-let toGoatLatin = (s) => {
 
+let toGoatLatin = (s) => {
+    let output = '';
+    let a = 'a';
+    let vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
+    let strArray = s.split(' ');
+    for (var i = 0; i < strArray.length - 1; i++) {
+        if (strArray[i].length === 1) {
+            output += strArray[i] + 'ma' + a + ' ';
+        } else if (vowels.includes(strArray[i][0])) {
+            output += strArray[i]+ 'ma' + a + ' ';
+        } else {
+            output += strArray[i].slice(1) + strArray[i][0] + 'ma' + a + ' ';
+        }
+        a += 'a';
+    }
+    if (vowels.includes(strArray[i][0])) {
+        output += strArray[i]+ 'ma' + a;
+        return output;
+    } else {
+        output += strArray[i].slice(1) + strArray[i][0] + 'ma' + a;
+        return output;
+    }
 }
